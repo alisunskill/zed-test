@@ -26,7 +26,7 @@ export default function ZedCards() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://zed4.vercel.app/api/getdata");
+        const response = await axios.get(process.env.REACT_APP_API_PATH +"/getdata");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
