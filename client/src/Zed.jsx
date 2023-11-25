@@ -47,7 +47,7 @@ export default () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/createdata",
+        process.env.REACT_APP_API_PATH  + "/createdata",
         formData
       );
       console.log("Data created:", response.data);
