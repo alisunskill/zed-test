@@ -46,10 +46,7 @@ export default () => {
       }
     }
     try {
-      const response = await axios.post(
-        process.env.REACT_APP_API_PATH  + "/createdata",
-        formData
-      );
+      const response = await axios.post(`${process.env.REACT_APP_API_PATH}/createdata`,formData);
       console.log("Data created:", response.data);
       setFormData({
         name: "",
