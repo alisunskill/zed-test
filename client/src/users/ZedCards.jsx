@@ -39,6 +39,7 @@ export default function ZedCards() {
   // delete card
 
   const handleDelete = async (id) => {
+    console.log(id, "ali")
     try {
       await axios.delete(process.env.REACT_APP_API_PATH +"/deletedata/${id}");
       setData(data.filter((item) => item._id !== id));
