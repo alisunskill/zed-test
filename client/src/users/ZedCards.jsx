@@ -40,7 +40,7 @@ export default function ZedCards() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(process.env.REACT_APP_API_PATH + "/deletedata/${id}");
+      await axios.delete(process.env.REACT_APP_API_PATH +"/deletedata/${id}");
       setData(data.filter((item) => item._id !== id));
     } catch (error) {
       console.error("Error deleting data:", error);
@@ -63,7 +63,7 @@ export default function ZedCards() {
   };
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(process.env.REACT_APP_API_PATH + "/editdata/${editItemId}",
+      const response = await axios.put(process.env.REACT_APP_API_PATH +"/editdata/${editItemId}",
         formData
       );
       console.log("Updated Data:", response.data);
