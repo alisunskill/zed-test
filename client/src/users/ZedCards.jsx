@@ -64,8 +64,7 @@ export default function ZedCards() {
   };
   const handleUpdate = async () => {
     try {
-const response = await axios.put(`${process.env.REACT_APP_API_PATH}/editdata/:{editItemId}`); 
-
+const response = await axios.put(`${process.env.REACT_APP_API_PATH}/editdata/:{editItemId}`),
         formData
       );
       console.log("Updated Data:", response.data);
