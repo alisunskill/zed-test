@@ -3,6 +3,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
+import "../zed.css"
 
 export default function ZedCards() {
   const [data, setData] = useState([]);
