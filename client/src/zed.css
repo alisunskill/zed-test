@@ -34,8 +34,8 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
 }
-p{
-      text-overflow: ellipsis;
+.user-para{
+  text-overflow: ellipsis;
     width: 200px;
     overflow: hidden;
     white-space: nowrap;
