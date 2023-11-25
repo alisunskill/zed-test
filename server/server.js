@@ -5,7 +5,7 @@ const cors = require("cors");
 const updatedRoutes = require("./routes");
 
 const app = express();
-const PORT = 8000;
+const PORT = zed-new-alisunskill.vercel.app;
 
 // Middlewares
 app.use(cors());
