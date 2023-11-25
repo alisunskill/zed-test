@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: 'https://zed-frontend.vercel.app', 
+  origin: 'https://zed-new-alisunskill.vercel.app', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204
 }));
