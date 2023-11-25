@@ -11,6 +11,12 @@ const PORT = 8000;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(cors({
+  origin: 'https://zed-frontend.vercel.app', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204
+}));
+
 // Routes
 app.use("/api", updatedRoutes);
 
