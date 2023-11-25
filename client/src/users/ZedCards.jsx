@@ -64,14 +64,13 @@ export default function ZedCards() {
   };
   const handleUpdate = async () => {
     try {
- const response = await axios.put(
-      `${process.env.REACT_APP_API_PATH}/editdata/${editItemId}`, 
-      formData
-    );
+      const response = await axios.put(
+        `${process.env.REACT_APP_API_PATH}/editdata/${editItemId}`,
+        formData
+      );
       console.log("Updated Data:", response.data);
-      setEditItemId(null);
-      setEditItem(null);
-      setShow(false);
+      setData(data.map((item) => (item._id === editItemId ? response.data : item)));
+      handleClose();
     } catch (error) {
       console.error("Error updating data:", error);
     }
@@ -140,10 +139,10 @@ export default function ZedCards() {
               </div>
             </Card>
 
-            {show && (
+            {editItem && (
               <Modal
                 key={item._id}
-                show={editItemId === item._id}
+               show={show}
                 onHide={handleClose}
               >
                 <Modal.Header closeButton>
