@@ -1,4 +1,7 @@
-const express = require("express");
+
+
+const start = async () => {
+  const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./connect");
 const cors = require("cors");
@@ -20,7 +23,6 @@ app.use(cors({
 // Routes
 app.use("/api", updatedRoutes);
 
-const start = async () => {
   try {
     await connectDB(
       "mongodb+srv://zedapp:zedapp@cluster0.nt0qqvj.mongodb.net/zedapp?retryWrites=true&w=majority"
@@ -35,6 +37,6 @@ const start = async () => {
   }
 };
 
-start();
+start()
 
-module.exports = app;
+module.exports = start;
