@@ -47,7 +47,7 @@ exports.getAllData = async (req, res) => {
         res.status(200).json({"hey": "okay"});
 
     // const allData = await UpdatedData.find();
-    res.status(200).json(allData);
+    // res.status(200).json(allData);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
