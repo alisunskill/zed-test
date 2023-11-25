@@ -118,7 +118,7 @@ export default function ZedCards() {
                   <Card.Text className="card-text mb-0">
                     Architecture:
                   </Card.Text>
-                  <Card.Text className="card-text mb-0">
+                  <Card.Text className="card-text user-para mb-0">
                     {item.architecture}
                   </Card.Text>
                 </div>
