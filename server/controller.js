@@ -44,10 +44,10 @@ exports.editData = async (req, res) => {
 
 exports.getAllData = async (req, res) => {
   try {
-        res.status(200).json({"hey": "okay"});
+        // res.status(200).json({"hey": "okay"});
 
-    // const allData = await UpdatedData.find();
-    // res.status(200).json(allData);
+    const allData = await UpdatedData.find();
+    res.status(200).json(allData);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
